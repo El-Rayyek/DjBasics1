@@ -1,0 +1,9 @@
+
+<form method='POST' enctype="multipart/form-data">
+    {%csrf_token%}
+    {{form}}
+    <input type="submit" value="Create Post">
+
+</form>
+
+<h1><a href="{% url 'Blog:post_list'%}">post list</a></h1>

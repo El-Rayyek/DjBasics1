@@ -1,6 +1,13 @@
 
 {{post}}
+<h3><a href="{%url 'Blog:edit_post'  post.id %}">Edit Post</a></h3>
+<h3><a href="{%url 'Blog:cbv_Post_delete'  post.id %}">Delete Post</a></h3>
+
+<hr>
+
+
 <h1>{{post.content}}</h1>
+
 
 <h1>{{post.publish_date}}</h1>
 <h1><a href="{%  url 'Blog:post_list' %}">list posts</a></h1>
