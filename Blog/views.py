@@ -51,13 +51,13 @@ def delete_post(request,id):
     return redirect('/Blog')
 
 #------------------------------------
-from django.views.generic import ListView , DetailView ,DeleteView
-class Post_view(ListView):
-    model = post
+# from django.views.generic import ListView , DetailView ,DeleteView
+# class Post_view(ListView):
+#     model = post
 
-class Post_Detail(DetailView):
-    model = post
+# class Post_Detail(DetailView):
+#     model = post
 
-class Post_Delete(DeleteView):
-    model = post
-    success_url = '/Blog/cbv'
+# class Post_Delete(DeleteView):
+#     model = post
+#     success_url = '/Blog/cbv'

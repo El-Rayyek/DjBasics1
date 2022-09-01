@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import post_list , post_detail , new_post ,edit_post ,delete_post ,Post_view,Post_Detail,Post_Delete
+from .views import post_list , post_detail , new_post ,edit_post ,delete_post #,Post_view,Post_Detail,Post_Delete
 
 app_name = 'post'
 
@@ -13,7 +13,7 @@ urlpatterns = [
 
 
 
-    path('cbv' , Post_view.as_view() , name = 'cbv_Post_list'),
-    path('cbv/<int:pk>',Post_Detail.as_view(), name='cbv_Post_detail'),
-    path('cbv/<int:pk>/delete>',Post_Delete.as_view(), name='cbv_Post_delete')
+    # path('cbv' , Post_view.as_view() , name = 'cbv_Post_list'),
+    # path('cbv/<int:pk>',Post_Detail.as_view(), name='cbv_Post_detail'),
+    # path('cbv/<int:pk>/delete>',Post_Delete.as_view(), name='cbv_Post_delete')
 ]

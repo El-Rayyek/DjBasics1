@@ -1,13 +1,34 @@
+{% extends 'base.html' %}
 
-{{post}}
-<h3><a href="{%url 'Blog:edit_post'  post.id %}">Edit Post</a></h3>
-<h3><a href="{%url 'Blog:cbv_Post_delete'  post.id %}">Delete Post</a></h3>
-
-<hr>
-
-
-<h1>{{post.content}}</h1>
-
-
-<h1>{{post.publish_date}}</h1>
-<h1><a href="{%  url 'Blog:post_list' %}">list posts</a></h1>
+{% block body %}
+    <div class="main-wrapper">
+	    
+	    <article class="blog-post px-3 py-5 p-md-5">
+		    <div class="container single-col-max-width">
+			    <header class="blog-post-header">
+				    <h2 class="title mb-2">{{post.title}}</a></h2>
+				    <div class="meta mb-3"><span class="date">{{post.publish_date}}</span><span class="time">5 min read</span><span class="comment"><a  class="text-link" href="#">4 comments</a></span></div>
+			    </header>
+			    <div>
+					
+					<div class="row">
+						
+						<div class="col-lg-6 col-md-6 col-sm-12">
+						<hr>		
+						<h1>{{post.content}}</h1>
+						
+						<h3><a href="{%  url 'Blog:edit_post'  post.id %}">Edit Post</a></h3>
+						<h3><a href="{%  url 'Blog:delete_post'  post.id %}">Delete Post</a></h3>
+						<h1><a href="{%  url 'Blog:post_list' %}">list posts</a></h1>
+				
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 py-md-4">
+							<img src="{{post.image.url}}" alt="image">
+						</div>
+					</div>
+</div>
+			    
+    
+{% endblock body %}
+        
+  
